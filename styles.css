@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+}
+
+.candle {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+}
+
+.flame {
+    position: absolute;
+    bottom: 180px;
+    left: 15px;
+    width: 20px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 50% 50% 20% 20%;
+    animation: burn 1s infinite alternate;
+    z-index: 1;
+}
+
+.wax {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 180px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* 白色 */
+.white-candle {
+    color: #FFFFFF; /* 十六进制表示法 */
+    color: rgb(255, 255, 255); /* RGB 表示法 */
+    color: hsl(0, 0%, 100%); /* HSL 表示法 */
+}
+
+/* 红色 */
+.red-candle {
+    color: #FF0000; /* 十六进制表示法 */
+    color: rgb(255, 0, 0); /* RGB 表示法 */
+    color: hsl(0, 100%, 50%); /* HSL 表示法 */
+}
+
+/* 粉色 */
+.pink-candle {
+    color: #FFC0CB; /* 十六进制表示法 */
+    color: rgb(255, 192, 203); /* RGB 表示法 */
+    color: hsl(350, 100%, 88%); /* HSL 表示法 */
+}
+
+@keyframes burn {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0.8);
+    }
+}
